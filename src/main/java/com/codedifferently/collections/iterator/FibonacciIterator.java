@@ -4,7 +4,16 @@ import java.util.Iterator;
 import java.util.function.Consumer;
 
 public class FibonacciIterator implements Iterator {
-    private static int whichIteration = 0;
+    private int firstNumber;
+    private int secondNumber;
+    private int currentSum;
+
+    public FibonacciIterator() {
+        firstNumber = 0;
+        secondNumber = 1;
+        currentSum = 0;
+    }
+
     @Override
     public boolean hasNext() {
         return true;
@@ -12,8 +21,11 @@ public class FibonacciIterator implements Iterator {
 
     @Override
     public Object next() {
-        whichIteration++;
-        return whichIteration;
+        currentSum = firstNumber + secondNumber;
+        firstNumber = secondNumber;
+        secondNumber = currentSum;
+
+        return currentSum;
     }
 
     @Override
@@ -26,11 +38,27 @@ public class FibonacciIterator implements Iterator {
 
     }
 
-    public static int getWhichIteration() {
-        return whichIteration;
+    public int getFirstNumber() {
+        return firstNumber;
     }
 
-    public static void setWhichIteration(int whichIteration) {
-        FibonacciIterator.whichIteration = whichIteration;
+    public void setFirstNumber(int firstNumber) {
+        this.firstNumber = firstNumber;
+    }
+
+    public int getSecondNumber() {
+        return secondNumber;
+    }
+
+    public void setSecondNumber(int secondNumber) {
+        this.secondNumber = secondNumber;
+    }
+
+    public int getCurrentSum() {
+        return currentSum;
+    }
+
+    public void setCurrentSum(int currentSum) {
+        this.currentSum = currentSum;
     }
 }

@@ -23,12 +23,72 @@ public class FibonacciIteratorTest {
 
     @Test
     public void nextTest() {
-        int expectedCount = 1;
+        int expectedNumber = 8;
 
         fibonacci.next();
-        int actualCount = FibonacciIterator.getWhichIteration();
+        fibonacci.next();
+        fibonacci.next();
+        fibonacci.next();
+        Integer wrapperClassOfActualVal = (Integer) fibonacci.next();
+        int actualNumber = wrapperClassOfActualVal.intValue();
 
-        Assert.assertEquals(expectedCount, actualCount);
+        Assert.assertEquals(expectedNumber, actualNumber);
+    }
 
+    @Test
+    public void getFirstNumberTest() {
+        int expected = 0;
+
+        int actual = fibonacci.getFirstNumber();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setFirstNumberTest() {
+        int expected = 4;
+
+        fibonacci.setFirstNumber(4);
+        int actual = fibonacci.getFirstNumber();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getSecondNumberTest() {
+        int expected = 1;
+
+        int actual = fibonacci.getSecondNumber();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setSecondNumberTest() {
+        int expected = 4;
+
+        fibonacci.setSecondNumber(4);
+        int actual = fibonacci.getSecondNumber();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getCurrentSumTest() {
+        int expected = 0;
+
+        int actual = fibonacci.getCurrentSum();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setCurrentSumTest() {
+        int expected = 6;
+
+        fibonacci.setCurrentSum(6);
+        int actual = fibonacci.getCurrentSum();
+
+        Assert.assertEquals(expected, actual);
     }
 }
