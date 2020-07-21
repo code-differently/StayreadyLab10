@@ -1,9 +1,6 @@
 package com.codedifferently.collections.listbuilder;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class LinkedListBuilder implements ListBuilder {
 
@@ -17,7 +14,18 @@ public class LinkedListBuilder implements ListBuilder {
     }
 
     public List buildList(Object[] a1, Object[] a2) {
-        return null;
+        LinkedList<Object> list = new LinkedList<>();
+
+        for (Object obj: a1)
+        {
+            list.addLast(obj);
+        }
+        for (Object obj: a2)
+        {
+            list.addLast(obj);
+        }
+
+        return list;
     }
 
     public List buildList(Collection c1, Collection c2) {
