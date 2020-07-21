@@ -1,4 +1,15 @@
 package com.codedifferently.collections.iterator;
 
-public class FibonacciIterator {
+import java.util.Iterator;
+
+public class FibonacciIterator implements Iterator {
+    @Override
+    public boolean hasNext() {
+        return true;
+    }
+
+    @Override
+    public Object next() {
+        return null;
+    }
 }
