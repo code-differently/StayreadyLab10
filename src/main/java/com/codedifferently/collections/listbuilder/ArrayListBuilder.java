@@ -1,16 +1,20 @@
 package com.codedifferently.collections.listbuilder;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
 public class ArrayListBuilder implements ListBuilder {
 
     public List buildList(Object[] a) {
-        return null;
+        List<Object> newList = Arrays.asList(a);
+        return newList;
     }
 
     public List buildList(Collection c) {
-        return null;
+        ArrayList<Collection> newList = new ArrayList<>(c);
+        return newList;
     }
 
     public List buildList(Object[] a1, Object[] a2) {
