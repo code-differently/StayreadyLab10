@@ -2,6 +2,7 @@ package com.codedifferently.collections.listbuilder;
 
 import java.util.*;
 
+
 public class LinkedListBuilder implements ListBuilder {
 
     public List buildList(Object[] a) {
