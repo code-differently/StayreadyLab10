@@ -70,7 +70,7 @@ public class LinkedListBuilderTest {
         int expectedSize = 2;
 
         List newList = linkedListBuilder.buildList(firstCollection, secondCollection);
-        ArrayList<Integer> newLinkedList = new ArrayList<Integer>(newList);
+        LinkedList<Integer> newLinkedList = new LinkedList<Integer>(newList);
         int actualSize = newLinkedList.size();
 
         Assert.assertEquals(expectedSize, actualSize);
