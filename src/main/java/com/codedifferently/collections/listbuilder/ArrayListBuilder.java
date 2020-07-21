@@ -26,12 +26,17 @@ public class ArrayListBuilder implements ListBuilder {
         //the collection type <interface> needs to become an object
         //thus, you use .toArray
 
-        for (Object obj: c.toArray())
+        /*for (Object obj: c.toArray())
         {
             array.add(obj);
         }
 
-        return array;
+        return array;*/
+
+        //another way is to cast the collection type var into an
+        //object and use the other already implemented method
+
+        return buildList(c.toArray());
     }
 
     public List buildList(Object[] a1, Object[] a2) {
