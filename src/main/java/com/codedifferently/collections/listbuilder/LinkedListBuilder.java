@@ -1,23 +1,31 @@
 package com.codedifferently.collections.listbuilder;
 
-import java.util.List;
-import java.util.Collection;
+import java.util.*;
 
 public class LinkedListBuilder implements ListBuilder {
+
     public List buildList(Object[] a) {
-        return null;
+        List listVersion = Arrays.asList(a);
+        LinkedList<Object> linkedListVersion = new LinkedList<Object>(listVersion);
+        return linkedListVersion;
     }
 
     public List buildList(Collection c) {
-        return null;
+        LinkedList<Collection> collectionList = new LinkedList<Collection>(c);
+        return collectionList;
     }
 
     public List buildList(Object[] a1, Object[] a2) {
-        return null;
+        List combinedList = copyOverElementsAndTurnIntoList(a1, a2);
+        LinkedList<Object> combinedLinkedList = new LinkedList<Object>(combinedList);
+        return combinedLinkedList;
     }
 
     public List buildList(Collection c1, Collection c2) {
-        return null;
+        List list = combineTwoCollectionsFirstPart(c1, c2);
+
+        LinkedList <Collection> combinedLinkedList = new LinkedList<Collection>(list);
+        return combinedLinkedList;
     }
 
 }

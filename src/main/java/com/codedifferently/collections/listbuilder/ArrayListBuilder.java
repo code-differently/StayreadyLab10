@@ -19,31 +19,15 @@ public class ArrayListBuilder implements ListBuilder {
     }
 
     public List buildList(Object[] a1, Object[] a2) {
-        Object[] combinedArr = new Object[a1.length + a2.length];
-        List combinedList = copyOverElementsAndTurnIntoList(combinedArr, a1, a2);
+        List combinedList = copyOverElementsAndTurnIntoList(a1, a2);
         ArrayList<Object> combinedArrayList = new ArrayList<Object>(combinedList);
         return combinedArrayList;
     }
 
-    private List copyOverElementsAndTurnIntoList(Object[] combinedArr, Object[] a1, Object[] a2) {
-        int overallIndex = 0;
-        for(Object a1Element: a1) {
-            combinedArr[overallIndex] = a1Element;
-            overallIndex++;
-        }
-        for(Object a2Element: a2) {
-            combinedArr[overallIndex] = a2Element;
-            overallIndex++;
-        }
-        List combinedList = Arrays.asList(combinedArr);
-        return combinedList;
-    }
-
     public List buildList(Collection c1, Collection c2) {
-        List<Collection> nonArrList = buildList(c1);
-        nonArrList.addAll(c2);
+        List list = combineTwoCollectionsFirstPart(c1, c2);
 
-        ArrayList <Collection> combinedArrayList = new ArrayList<Collection>(nonArrList);
+        ArrayList <Collection> combinedArrayList = new ArrayList<Collection>(list);
         return combinedArrayList;
     }
 
