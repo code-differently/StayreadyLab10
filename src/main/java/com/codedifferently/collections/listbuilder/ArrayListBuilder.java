@@ -32,6 +32,7 @@ public class ArrayListBuilder implements ListBuilder {
         }
 
         return array;
+
     }
 
     public List buildList(Object[] a1, Object[] a2) {
@@ -50,6 +51,6 @@ public class ArrayListBuilder implements ListBuilder {
     }
 
     public List buildList(Collection c1, Collection c2) {
-        return null;
+        return buildList(c1.toArray(), c2.toArray());
     }
 }

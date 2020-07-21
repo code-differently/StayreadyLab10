@@ -13,7 +13,7 @@ public class LinkedListBuilder implements ListBuilder {
     }
 
     public List buildList(Collection c) {
-        return null;
+        return buildList(c.toArray());
     }
 
     public List buildList(Object[] a1, Object[] a2) {
@@ -21,6 +21,6 @@ public class LinkedListBuilder implements ListBuilder {
     }
 
     public List buildList(Collection c1, Collection c2) {
-        return null;
+        return buildList(c1.toArray(),c2.toArray());
     }
 }
