@@ -4,6 +4,19 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class FibonacciIteratorTest {
+
+    @Test
+    public void hasNextTest()
+    {
+        //Given 
+        FibonacciIterator fibonacciIterator = new FibonacciIterator();
+        //When
+        Boolean expected = true;
+        Boolean actual = fibonacciIterator.hasNext();
+        //Then 
+        Assert.assertEquals(expected, actual); 
+
+    }
     @Test
     public void fibonnacciTest()
     {
