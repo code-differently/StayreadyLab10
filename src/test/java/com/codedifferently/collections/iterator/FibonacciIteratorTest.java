@@ -1,8 +1,5 @@
 package com.codedifferently.collections.iterator;
-
-import java.beans.IntrospectionException;
 import java.util.ArrayList;
-
 import org.junit.Assert;
 import org.junit.Test;
 

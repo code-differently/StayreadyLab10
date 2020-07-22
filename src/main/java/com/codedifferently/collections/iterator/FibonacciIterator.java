@@ -7,12 +7,10 @@ public class FibonacciIterator implements Iterator<Object>{
     public Integer number = 0;
 
     public boolean hasNext() {
-        // TODO Auto-generated method stub
         return true;
     }
 
     public Object next() {
-        // TODO Auto-generated method stub
 
         return fibonnacci(number+1);
     }
