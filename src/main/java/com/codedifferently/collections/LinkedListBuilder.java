@@ -20,8 +20,6 @@ public class LinkedListBuilder implements ListBuilder {
     }
 
     public List<Object> buildList(Object[] a1, Object[] a2) {
-
-        // TODO Auto-generated method stub
         LinkedList<Object> linkedList = new LinkedList<Object>(buildList(a1));
         LinkedList<Object> linkedList2 = new LinkedList<Object>(buildList(a2));
         LinkedList<Object> newLinkedList = new LinkedList<Object>();
@@ -31,8 +29,6 @@ public class LinkedListBuilder implements ListBuilder {
     }
 
     public List<Object> buildList(Collection<Object> c1, Collection<Object> c2) {
-
-        // TODO Auto-generated method stub
         LinkedList<Object> linkedList = new LinkedList<Object>(c1);
         LinkedList<Object> linkedList2 = new LinkedList<Object>(c2);
         LinkedList<Object> newLinkedList = new LinkedList<Object>();
