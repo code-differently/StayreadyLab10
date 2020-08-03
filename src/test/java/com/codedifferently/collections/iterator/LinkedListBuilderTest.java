@@ -1,6 +1,7 @@
 package com.codedifferently.collections.iterator;
 
 import com.codedifferently.collections.listbuilder.ArrayListBuilder;
+import com.codedifferently.collections.listbuilder.LinkedListBuilder;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -60,18 +61,23 @@ public class LinkedListBuilderTest {
 
     @Test
     public void combineTwoCollectionsToLinkedList(){
-        ArrayListBuilder arrayListBuilder = new ArrayListBuilder();
+        LinkedListBuilder linkedListBuilder = new LinkedListBuilder();
 
-        List<Integer> testcase1 = new List<Integer>();
-//        te
-//        expected.add(1);
-//        expected.add(2);
+        List<Integer> testcase1 = new LinkedList<Integer>();
+        testcase1.add(0);
+        testcase1.add(1);
+        testcase1.add(2);
         List<Integer> testcase2 = new LinkedList<Integer>();
-//        testcase2.add(10);
-//        testcase2.add(9);
-//        testcase2.add(8);
+        testcase2.add(10);
+        testcase2.add(9);
+        testcase2.add(8);
+
         List<Integer> expected = new LinkedList<Integer>();
-        Assert.assertEquals(Collections.addAll(expected,0,1,2,10,9,8),arrayListBuilder.buildList(testCase1,testCase2));
+        expected.addAll(testcase1);
+        expected.addAll(testcase2);
+
+        Assert.assertEquals(expected,
+                linkedListBuilder.buildList(testcase1,testcase2));
 
     }
 

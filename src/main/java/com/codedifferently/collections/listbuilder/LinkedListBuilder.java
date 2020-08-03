@@ -24,7 +24,7 @@ public class LinkedListBuilder implements ListBuilder {
 
     public List buildList(Collection c1, Collection c2) {
         LinkedList linkedList = new LinkedList(c1);
-        linkedList.add(c2);
+        linkedList.addAll(c2);
         return linkedList;
     }
 }
